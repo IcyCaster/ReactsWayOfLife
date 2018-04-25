@@ -1,13 +1,18 @@
-const underPopulation = (neighbours) => {
+export const isCellAlive = (state, neighbours) => {
+    if(isReproductive(neighbours)) return true;
+    if(isOverPopulated(neighbours) || isUnderPopulated(neighbours)) return false;
+    return state;
+};
+
+export const isUnderPopulated = (neighbours) => {
     return neighbours < 2;
 };
 
-const overPopulation = (neighbours) => {
+export const isOverPopulated = (neighbours) => {
     return neighbours > 3;
 };
 
-const reproductive = (neighbours) => {
+export const isReproductive = (neighbours) => {
     return neighbours === 3;
 };
 
-export default { underPopulation, overPopulation, reproductive }
