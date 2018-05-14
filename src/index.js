@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import TenByTenTable from "./components/TenByTenTable";
+import Table from "./components/Table";
 
 const Index = () => {
-    return <TenByTenTable/>;
+    return <Table/>;
 };
 
 ReactDOM.render(<Index />, document.getElementById("index"));
