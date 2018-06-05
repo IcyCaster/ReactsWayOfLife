@@ -8,7 +8,8 @@ export default class Cell extends React.Component {
   deadCell = () => <td>X</td>;
 
   render() {
-    return this.props.isAlive ? this.aliveCell : this.deadCell;
+    const x = this.props.isAlive ? this.aliveCell : this.deadCell;
+    return { x };
   }
 }
 

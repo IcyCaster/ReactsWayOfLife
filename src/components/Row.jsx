@@ -6,9 +6,9 @@ export default class Row extends React.Component {
   render() {
     return (
       <tr>
-        <Cell />
-        <Cell />
-        <Cell />
+        <Cell isAlive />
+        <Cell isAlive={false} />
+        <Cell isAlive />
       </tr>
     );
   }
