@@ -5,6 +5,7 @@
     "browser": true,
     "jest": true
   },
+  "parser": "babel-eslint",
   "rules": {
     "quotes": ["error", "double"]
   }
