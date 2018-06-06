@@ -1,7 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import * as Table from "./components/Table";
+import App from "./App";
 
-const Index = () => <Table />;
-
-ReactDOM.render(<Index />, document.getElementById("index"));
+ReactDOM.render(<App />, document.getElementById("index"));
