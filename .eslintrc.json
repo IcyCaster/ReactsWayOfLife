@@ -8,6 +8,7 @@
   "parser": "babel-eslint",
   "rules": {
     "quotes": ["error", "double"],
+    "linebreak-style": ["error","windows"],
     "react/prefer-stateless-function": [0, { "ignorePureComponents": true }]
   }
 }
