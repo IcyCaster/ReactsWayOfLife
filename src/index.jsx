@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import * as Table from "./components/Table";
+import Table from "./components/Table";
 
 const Index = () => <Table />;
 
