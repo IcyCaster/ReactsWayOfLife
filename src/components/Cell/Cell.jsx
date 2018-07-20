@@ -4,12 +4,11 @@ import { bool } from "prop-types";
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class Cell extends React.Component {
-  aliveCell = () => <td>X</td>;
-  deadCell = () => <td>O</td>;
+  aliveCell = () => <td className="alive-cell">O</td>;
+  deadCell = () => <td className="dead-cell">X</td>;
 
   render() {
-    const x = this.props.isAlive ? this.aliveCell() : this.deadCell();
-    return x;
+    return this.props.isAlive ? this.aliveCell() : this.deadCell();
   }
 }
 
