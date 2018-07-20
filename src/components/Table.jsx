@@ -5,18 +5,11 @@ import Row from "./Row";
 
 export default class Table extends React.Component {
   render() {
-    const testcells = () => [
-      [{ isAlive: true }, { isAlive: true }, { isAlive: true }],
-      [{ isAlive: true }, { isAlive: true }, { isAlive: true }],
-      [{ isAlive: true }, { isAlive: true }, { isAlive: true }],
-    ];
-
+    const rows = this.props.cells.map(row => <Row row={row} />);
     return (
       <table>
         <tbody>
-          <Row />
-          <Row />
-          <Row />
+          {rows}
         </tbody>
       </table>
     );
@@ -25,9 +18,9 @@ export default class Table extends React.Component {
 
 Table.propTypes = {
   cells:
-        arrayOf(arrayOf(shape({
-          isAlive: bool.isRequired,
-        }))),
+    arrayOf(arrayOf(shape({
+      isAlive: bool.isRequired,
+    }))),
 };
 
 Table.defaultProps = {

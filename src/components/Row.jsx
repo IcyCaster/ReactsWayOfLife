@@ -1,15 +1,25 @@
+import { arrayOf, shape, bool } from "prop-types";
 import React from "react";
 import Cell from "./Cell/Cell";
 
 export default class Row extends React.Component {
   render() {
+    const cells = this.props.row.map(cell => <Cell isAlive={cell.isAlive} />);
     return (
       <tr>
-        <Cell isAlive />
-        <Cell isAlive={false} />
-        <Cell isAlive />
+        {cells}
       </tr>
     );
   }
 }
+
+Row.propTypes = {
+  row: arrayOf(shape({
+    isAlive: bool.isRequired,
+  })),
+};
+
+Row.defaultProps = {
+  row: [],
+};
 
