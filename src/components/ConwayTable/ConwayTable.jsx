@@ -3,7 +3,7 @@ import React from "react";
 import Row from "./Row";
 
 
-export default class Table extends React.Component {
+export default class ConwayTable extends React.Component {
   render() {
     const rows = this.props.cells.map((row, key) => <Row key={key} row={row} />);
     return (
@@ -16,13 +16,13 @@ export default class Table extends React.Component {
   }
 }
 
-Table.propTypes = {
+ConwayTable.propTypes = {
   cells:
     arrayOf(arrayOf(shape({
       isAlive: bool.isRequired,
     }))),
 };
 
-Table.defaultProps = {
+ConwayTable.defaultProps = {
   cells: [],
 };

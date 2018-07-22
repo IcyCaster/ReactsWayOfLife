@@ -1,5 +1,5 @@
 import React from "react";
-import Table from "./components/Table";
+import ConwayTable from "./components/ConwayTable/ConwayTable";
 
 /* eslint-disable max-len */
 function exampleCells() {
@@ -17,5 +17,5 @@ function exampleCells() {
 }
 /* eslint-enable max-len */
 
-const App = () => <Table cells={exampleCells()} />;
+const App = () => <ConwayTable cells={exampleCells()} />;
 export default App;

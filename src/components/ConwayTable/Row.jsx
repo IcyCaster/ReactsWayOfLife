@@ -1,6 +1,6 @@
 import { arrayOf, shape, bool } from "prop-types";
 import React from "react";
-import Cell from "./Cell/Cell";
+import Cell from "./Cell";
 
 export default class Row extends React.Component {
   render() {
