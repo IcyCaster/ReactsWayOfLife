@@ -4,7 +4,7 @@ import Cell from "./Cell/Cell";
 
 export default class Row extends React.Component {
   render() {
-    const cells = this.props.row.map(cell => <Cell isAlive={cell.isAlive} />);
+    const cells = this.props.row.map((cell, key) => <Cell key={key} isAlive={cell.isAlive} />);
     return (
       <tr>
         {cells}

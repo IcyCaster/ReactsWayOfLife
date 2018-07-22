@@ -5,7 +5,7 @@ import Row from "./Row";
 
 export default class Table extends React.Component {
   render() {
-    const rows = this.props.cells.map(row => <Row row={row} />);
+    const rows = this.props.cells.map((row, key) => <Row key={key} row={row} />);
     return (
       <table>
         <tbody>
